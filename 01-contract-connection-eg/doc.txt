@@ -31,3 +31,5 @@ userRegistration.registerUser(
       }
 )
 **/
+
+getUserAccountrally there are 3 community tokens, devtoken, desgtoken and founderstoken. expand each folder to see details.
