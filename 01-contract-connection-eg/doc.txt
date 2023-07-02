@@ -1,0 +1,33 @@
+you can go to the master branch of "https://github.com/mySociogram/blockdev/tree/master/mysociogram", under the contracts folder to see the contract functions.
+you can access those functions using the function names. For instance, calling the "registerUser" function of "UserRegistration" contract.
+
+Let's say you've connected to the UserRegistration contract using this JS function 
+
+/***
+const getUserRegistrationContract = async () => {
+  const provider = new ethers.providers.Web3Provider(eth);
+  const signer = provider.getSigner();
+  const transactionContract = new ethers.Contract(
+    contractAddress,
+    contractABI,
+    signer
+  );
+
+  return transactionContract;
+};
+***/
+
+Await the function as: 
+/**
+const userRegistration = await getUserRegistrationContract()
+**/
+
+Then to register a user, pass the gasLimit and the necessary function args 
+/**
+userRegistration.registerUser(
+    username,
+    {
+        gasLimit: '0x7EF40'
+      }
+)
+**/
